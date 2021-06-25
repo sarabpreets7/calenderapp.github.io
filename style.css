@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    background-color: rgb(230, 245, 247);
+    /* aliceblue */
+}
+.heading{
+    align-self:center;
+    text-decoration: underline;
+    height: 8vh;
+    width: 36vw;
+    font-size: 2.5vw;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    border-radius: 11%;
+    transition: all 0.5s ease;
+    font-style: oblique;
+    
+}
+.heading:hover{
+    color: brown;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+.calender{
+    height: 60vh;
+    width: 65.57vw;
+    background-color:lightgray;
+    align-self: center;
+    border-top: 2px solid black;
+    border-left: 2px solid brown;
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+}
+.weekdays{
+    display: flex;
+    width: 100%;
+    
+    height: 7vh;
+}
+.weekday{
+    height: 100%;
+    width: calc(65vw/7);
+    background-color: black;
+    border-right: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 12%;
+}
+.weekday:hover{
+    background-color: brown;
+}
+.calender-days{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    
+}
+.row-day{
+    height: 9.5vh;
+    width: calc(65vw/7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+    font-size: 1vw;
+    overflow:hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+}
+.row-day:hover{
+    background-color: rgb(122, 119, 119);
+}
+
+.row-day.selected{
+background-color: pink;
+color: white;
+display: flex;
+flex-direction: column;
+transition: all 0.5s ease;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+overflow:hidden;
+font-size: 1vw;
+
+}
+.row-day.selected:hover{
+    background-color: palevioletred;
+}
+
+.select-teacher{
+    align-self:center;
+    margin: 30px;
+    
+}
+.select-teacher select{
+    height: 7vh;
+    width: calc(65vw/7);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 12%;
+    
+    
+}
+.select-teacher select:hover{
+    background-color: brown;
+}
+.main-nav{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 65.6vw;
+    
+}
+.add-teacher{
+    height: 7vh;
+    width: calc(65vw/7);
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 12%;
+}
+.add-teacher:hover{
+    background-color: brown;
+}
+.add-task{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-items: flex-end;
+    width: 65.6vw;
+}
+.add-task button{
+    height: 5vh;
+    width: calc(65vw/7);
+    background-color: black;
+    color: lightgray;
+    cursor: pointer;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    align-self:center;
+    margin: 5px;
+    border-radius: 12%;
+    
+    
+}
+#nine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-task button:hover{
+    background-color: brown;
+}
+.pop-up{
+    position: absolute;
+    height: 45vh;
+    top: 50%;
+    left: 50%;
+    width: 40vw;
+    transform: translate(-50%, -50%) ;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    z-index: 4;
+    background-color: white;
+    border: 2px solid brown;
+}
+.pop-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    align-self: center;
+    background-color: black;
+    border-right: 1px solid white;
+    color: white;
+    height: 6vh;
+    width: 8.8vw;
+    font-size: 1.3vw;
+    transition: all 0.5s ease;
+    
+}
+.pop-head:hover{
+    background-color: brown;
+}
+.topic,.start,.end,.date{
+    display: flex;
+    justify-content: center;
+}
+.topic input,.start input,.end input,.date input{
+    height: 5vh;
+    width: 24vw;
+    transition: all 0.5s ease;
+    
+}
+.end input:hover{
+    border: 2px solid brown;
+}
+.start input:hover{
+    border: 2px solid brown;
+}
+.topic input:hover{
+    border: 2px solid brown;
+}
+.date input:hover{
+    border: 2px solid brown;
+}
+.submit{
+    height: 6vh;
+    width: 8vw;
+    background-color: black;
+    color: white;
+    align-self: center;
+    transition: all 0.5s ease;
+    border-radius: 12%;
+
+}
+.submit:hover{
+    background-color: brown;
+}
+.datem{
+    margin-left: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: black;
+    height: 7.2vh;
+    width: 14vw;
+    border-radius: 12%;
+    font-size: 1.4vw;
+}
+.datem:hover{
+    background-color: brown;
+}
+#daY{
+    transition: all 0.5s ease;
+}
+@media all and (min-width:340px) and (max-width: 580px) {
+
+    .calender-days{
+        width: 65.2vw;
+       
+    }
+    .row-day{
+     width: 9.05vw;
+    }
+    
+}
+@media all and (min-width:580px) and (max-width: 1085px) {
+
+    .calender-days{
+        width: 65.6vw;
+       
+    }
+    .row-day{
+     width: 9.19vw;
+    }
+    
+}
+@media all and (min-width:264px) and (max-width: 340px) {
+
+    .calender-days{
+        width: 67.3vw;
+    }
+    .row-day{
+       width: 9vw;
+    }
+}
